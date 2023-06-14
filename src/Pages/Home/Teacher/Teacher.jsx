@@ -1,19 +1,10 @@
-import { useEffect, useState } from "react";
+
 import AllTeacher from "../../AllTeacher/AllTeacher";
+import useInstructors from "../../../hooks/useInstructors";
 
 const Teacher = () => {
-    const [AllT, setAllT] = useState([]);
-
-    useEffect(() => {
-        fetch("teacher.json")
-
-            .then(res => res.json())
-            .then(data => setAllT(data))
-
-
-
-            .catch(error => console.log(error))
-    }, [])
+   
+    const [AllT]=useInstructors();
     return (
         <div className="grid md:grid-cols-3 gap-4 py-4 mb-5 ">
 
