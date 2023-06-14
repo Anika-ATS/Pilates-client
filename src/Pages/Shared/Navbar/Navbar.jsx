@@ -1,12 +1,24 @@
+import { Link } from 'react-router-dom';
 import logo from '../../../assets/img/logo.jpg';
 const Navbar = () => {
-    const NavItems=<>
-                        <li><a>Home</a></li>
-                        <li><a>Instructors</a></li>
-                       
-                        <li><a>Classes</a></li>
-                        <li><a>Dashboard</a></li>
-                        <li><a>Login</a></li></>
+    const NavItems = <>
+        <li><Link to='/' ><a>Home</a></Link></li>
+        <li><Link to='/instructors'><a>Instructors</a></Link></li>
+
+        <li><Link><a>Classes</a></Link></li>
+        <li tabIndex={0}>
+        <details>
+          <summary>Dashboard</summary>
+          <ul className="p-2 z-50">
+            <li><Link><a>Student Dashboard</a></Link></li>
+            <li><Link><a>Admin Dasboard</a></Link></li>
+          </ul>
+        </details>
+      </li>
+        {/* <li><a>Student Dashboard</a></li>
+        <li><a>Admin Dasboard</a></li> */}
+        <li><Link><a>Login</a></Link></li>
+         </>
     return (
 
         <div className="navbar bg-base-100">
@@ -17,7 +29,7 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {NavItems}
-                        
+
                     </ul>
                 </div>
                 <div className='flex justify-between '>
@@ -29,24 +41,25 @@ const Navbar = () => {
                     </a>
                 </div>
             </div>
-          
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {NavItems}
+                    
                 </ul>
             </div>
             <div className="navbar-end flex flex-row">
                 <div className='flex justify-between  '>
-                {/* {user &&  <Link > */}
-                <div className="avatar w-1/2 mt-2 pe-3">
-                    <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        <img src={''} />
+                    {/* {user &&  <Link > */}
+                    <div className="avatar w-1/2 mt-2 pe-3">
+                        <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <img src={''} />
+                        </div>
                     </div>
+                    {/* </Link>} */}
+
+
                 </div>
-                {/* </Link>} */}
-                
-               
-            </div>
             </div>
         </div>
     );

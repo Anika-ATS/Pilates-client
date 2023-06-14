@@ -1,4 +1,4 @@
-import logo from '../../../assets/yoga-and-meditation-logo-free-png.webp'
+import logo from '../../../assets/img/logo.jpg'
 
 const Footer = () => {
     return (

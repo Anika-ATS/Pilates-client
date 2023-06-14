@@ -39,55 +39,56 @@ const ClsCatagory = () => {
                 >
                     {/* <div ></div> */}
                     <SwiperSlide>
-                        <img src={all} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
-                       
+                        <img  src={all} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
+                        
+
 
                     </SwiperSlide>
 
                     <SwiperSlide>
-                        <img src={yama} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img   src={yama}  alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Yama--</h2>
 
                             </div>
 
 
                         </div>
-                        
-                        
+
+
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={niyama} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img src={niyama} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Niyama--</h2>
 
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={Asana} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img src={Asana} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Asana--</h2>
 
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={Pranayama} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img src={Pranayama} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Pranayama--</h2>
 
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={Pratyahara} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img src={Pratyahara} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Pratyahara--</h2>
 
                             </div>
@@ -95,27 +96,27 @@ const ClsCatagory = () => {
 
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={Dharana} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img src={Dharana} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Dharana--</h2>
 
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={Dhyana} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img src={Dhyana} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Dhyana--</h2>
 
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={Samadhi} alt="" className="px-5 py-5 object-cover w-full h-[750px]" />
+                        <img src={Samadhi} alt="" className="px-20 py-16 object-cover w-full h-[750px]" />
                         <div className="absolute   top-3 ">
-                            <div className='pl-16 pt-5 space-y-2 w-full'>
+                            <div className='pl-20 pt-4 space-y-2 w-full'>
                                 <h2 className="text-3xl bg-neutral-50  text-lime-800 mb-2 border border-lime-600">--Samadhi--</h2>
 
                             </div>
