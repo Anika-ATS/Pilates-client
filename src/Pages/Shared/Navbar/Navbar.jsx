@@ -15,28 +15,29 @@ const Navbar = () => {
         <li><Link to='/' >Home</Link></li>
         <li><Link to='/instructors'>Instructors</Link></li>
 
-        <li><Link><a>Classes</a></Link></li>
+        
 
         {user?.email ?<>
+        <li><Link>Student Dashboard</Link></li>
+        <li><Link>Admin Dasboard</Link></li> 
         <li tabIndex={0}>
         <details>
-          <summary>Dashboard</summary>
-          <ul className="p-2 z-50">
-            <li><Link>Student Dashboard</Link></li>           
-            <li><Link>Admin Dasboard  </Link></li>
-            <li><Link>Instructor Dasboard </Link></li>
+          <summary>Instructor Dashboard</summary>
+          <ul className="p-2 z-50">                       
+          <li><Link to='/MyCls'>My Classes</Link></li>
+          <li><Link to='/addAclass'>Add a Class</Link></li>
           </ul>
         </details>
         
       </li>
+      <span>{user?.displayName}</span>
       <li><button onClick={handleLogOut}>Log Out</button></li>
       </>
        : <li><Link to='/login'>Login</Link></li>}
 
 
 
-        {/* <li><a>Student Dashboard</a></li>
-        <li><a>Admin Dasboard</a></li> */}
+        
         
          </>
     return (
@@ -70,13 +71,13 @@ const Navbar = () => {
             </div>
             <div className="navbar-end flex flex-row">
                 <div className='flex justify-between  '>
-                    {/* {user &&  <Link > */}
+                    {user &&  <Link >
                     <div className="avatar w-1/2 mt-2 pe-3">
                         <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img src={''} />
+                            {/* <img src={''} /> */}
                         </div>
                     </div>
-                    {/* </Link>} */}
+                    </Link>}
 
 
                 </div>

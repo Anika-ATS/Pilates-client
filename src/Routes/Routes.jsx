@@ -8,6 +8,8 @@ import Home from "../Pages/Home/Home/Home";
 import Teacher from "../Pages/Home/Teacher/Teacher";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
+import AddClass from "../Pages/InstructorClasses/AddClass";
+import MyClasses from "../Pages/InstructorClasses/MyClasses";
 
  export const router = createBrowserRouter([
     {
@@ -33,7 +35,17 @@ import Register from "../Pages/Login/Register";
           path:'register',
           element:<Register></Register>
 
-      },
+        },
+        {
+          path:'/addAclass',
+          element:<AddClass></AddClass>
+
+        },
+        {
+          path:'MyCls',
+          element:<MyClasses></MyClasses>
+
+        },
        
       
       ]

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
 import registerPic from '../../assets/classes/register.jpg';
 
@@ -10,11 +10,12 @@ const Register = () => {
     const {
         register,
         handleSubmit,
+        reset,
 
         formState: { errors },
     } = useForm();
-
-       const {createUser}=useContext(AuthContext);
+    const navigate=useNavigate();
+       const {createUser,udateUserProfile,logOut}=useContext(AuthContext);
     const onSubmit = (data) =>{ 
         console.log(data),
         //create user
@@ -22,6 +23,20 @@ const Register = () => {
             .then(result=>{
                 const createdUser=result.user;
                 console.log(createdUser);
+                udateUserProfile(data.name,data.photo)
+                .then(() => {
+                    console.log('Profile updated!');
+                    reset();
+                    logOut()
+                    .then(()=>{
+                        navigate ('/login');
+                    })
+                    .catch(error => console.log(error));
+                    
+                    
+                  })
+                  .catch(error =>  console.log(error));
+                    
             })
             .catch(error=>{
                 console.log(error);
