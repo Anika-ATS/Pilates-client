@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 // import { loadCaptchaEnginge, LoadCanvasTemplate} from 'react-simple-captcha';
 
-
+import Swal from 'sweetalert2';
 import login from '../../assets/classes/Login.webp';
 
 import { Link , useLocation, useNavigate} from 'react-router-dom';
@@ -39,6 +39,11 @@ const Login = () => {
                 const LogInUser=result.user;
                 console.log(LogInUser);
                 navigate(from,{replace:true});
+                Swal.fire('Complete')
+
+
+
+
             })
             .catch(error=>{
                 console.log(error);
