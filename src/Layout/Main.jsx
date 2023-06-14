@@ -8,10 +8,12 @@ const Main = () => {
     const location=useLocation();
     console.log(location);
     const NoNavbarAndFooter=location.pathname.includes('login');
+    // const NoNavbarAndFooter=location.pathname.includes('register');
 
     return (
         <div>
             {NoNavbarAndFooter ||<Navbar></Navbar>}
+
             <Outlet></Outlet>
             
             {NoNavbarAndFooter ||<Footer></Footer>}
