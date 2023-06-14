@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/img/logo.jpg';
 const Navbar = () => {
     const NavItems = <>
-        <li><Link to='/' ><a>Home</a></Link></li>
-        <li><Link to='/instructors'><a>Instructors</a></Link></li>
+        <li><Link to='/' >Home</Link></li>
+        <li><Link to='/instructors'>Instructors</Link></li>
 
         <li><Link><a>Classes</a></Link></li>
         <li tabIndex={0}>
@@ -17,7 +17,7 @@ const Navbar = () => {
       </li>
         {/* <li><a>Student Dashboard</a></li>
         <li><a>Admin Dasboard</a></li> */}
-        <li><Link><a>Login</a></Link></li>
+        <li><Link to='/login'>Login</Link></li>
          </>
     return (
 
