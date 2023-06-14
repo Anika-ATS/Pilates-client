@@ -1,26 +1,26 @@
-// import { useContext } from 'react';
-import { loadCaptchaEnginge, LoadCanvasTemplate} from 'react-simple-captcha';
+import { useContext } from 'react';
+// import { loadCaptchaEnginge, LoadCanvasTemplate} from 'react-simple-captcha';
 
 
 import login from '../../assets/classes/Login.webp';
 
-import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Link , useLocation, useNavigate} from 'react-router-dom';
+// import { useEffect } from 'react';
 // , useLocation, useNavigate, LoadCanvasTemplateNoReload, validateCaptcha 
 
-// import { AuthContext } from '../../Providers/AuthProviders';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
-    useEffect(() => {
-        loadCaptchaEnginge(6); 
-    }, [])
+    // useEffect(() => {
+    //     loadCaptchaEnginge(6); 
+    // }, [])
 
 
-    // const {SignInUser}=useContext(AuthContext);
-    // const navigate=useNavigate();
-    // const location=useLocation();
-    // // console.log('bye',location);
-    // const from=location.state?.from?.pathname||'/';
+    const {SignInUser}=useContext(AuthContext);
+    const navigate=useNavigate();
+    const location=useLocation();
+    // console.log('bye',location);
+    const from=location.state?.from?.pathname||'/';
 
 
     const handleOnLogin=event=>{
@@ -33,16 +33,16 @@ const Login = () => {
     
        console.log(password,email);
     
-        //create user
-        // SignInUser(email,password)
-        //     .then(result=>{
-        //         const LogInUser=result.user;
-        //         console.log(LogInUser);
-        //         navigate(from,{replace:true});
-        //     })
-        //     .catch(error=>{
-        //         console.log(error);
-        //     })
+        // create user
+        SignInUser(email,password)
+            .then(result=>{
+                const LogInUser=result.user;
+                console.log(LogInUser);
+                navigate(from,{replace:true});
+            })
+            .catch(error=>{
+                console.log(error);
+            })
        }
     return (
         <div>
@@ -77,13 +77,13 @@ const Login = () => {
                                 </label>
                             </div>
                             {/* captcha */}
-                            <div className="form-control">
+                            {/* <div className="form-control">
                                 <label className="label">
                                    <LoadCanvasTemplate />
                                 </label>
                                 <input type="text" placeholder="password" name='password' className="input input-bordered" />
                                
-                            </div>
+                            </div> */}
 
 
 
