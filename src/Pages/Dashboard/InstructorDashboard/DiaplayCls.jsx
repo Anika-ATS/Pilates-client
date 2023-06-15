@@ -4,7 +4,7 @@ const DiaplayCls = ({cls}) => {
     const {_id, Iname,name,email,photo,price,seat,status } = cls;
     return (
         <div>
-            <div className="hero h-[500px]  mx-7 bg-base-200 mt-7 mb-7 ">
+            <div className="hero h-[500px]  mx-auto bg-base-200 mt-7 mb-7 ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
                     <div>
