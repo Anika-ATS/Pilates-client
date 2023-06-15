@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 const useAllClasses = () => {
     // const { user } = useContext(AuthContext);
-    const [MyClasses, setMyClasses] = useState([]);
+    const [AdminClasses, setAdminClasses] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -10,7 +10,7 @@ const useAllClasses = () => {
 
             .then(res => res.json())
             .then(data =>{
-                setMyClasses(data);
+                setAdminClasses(data);
                 setLoading(false)
             } )
 
@@ -18,7 +18,7 @@ const useAllClasses = () => {
 
             .catch(error => console.log(error))
     }, [])
-    return [MyClasses,loading]
+    return [AdminClasses,loading]
 };
 
 export default useAllClasses;

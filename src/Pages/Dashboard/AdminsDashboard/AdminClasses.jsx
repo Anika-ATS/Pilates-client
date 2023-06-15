@@ -4,11 +4,11 @@ import DisplayAcls from "./DisplayAcls";
 
 
 const AdminClasses = () => {
-    const [MyClasses] = useAllClasses();
+    const [AdminClasses] = useAllClasses();
     return (
 
        <section>
-         {MyClasses.map(cls2=><DisplayAcls
+         {AdminClasses.map(cls2=><DisplayAcls
          key={cls2._id}
          cls2={cls2}
          ></DisplayAcls>
