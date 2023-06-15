@@ -12,15 +12,16 @@ const Navbar = () => {
 
 
     const NavItems = <>
-        <li><Link to='/' >Home</Link></li>
+        <li><Link to='/' className='ml-7'>Home</Link></li>
         <li><Link to='/instructors'>Instructors</Link></li>
 
         
 
         {user?.email ?<>
-        <li><Link>Student Dashboard</Link></li>
+        <li><Link  to='/dashboard/instructorD'>Intructor Dashboard</Link></li>
         <li><Link>Admin Dasboard</Link></li> 
-        <li tabIndex={0}>
+        <li><Link>Student Dasboard</Link></li> 
+        {/* <li tabIndex={0}>
         <details>
           <summary>Instructor Dashboard</summary>
           <ul className="p-2 z-50">                       
@@ -29,11 +30,12 @@ const Navbar = () => {
           </ul>
         </details>
         
-      </li>
-      <span>{user?.displayName}</span>
-      <li><button onClick={handleLogOut}>Log Out</button></li>
-      </>
-       : <li><Link to='/login'>Login</Link></li>}
+        </li> */}
+        
+        <li><button onClick={handleLogOut}>Log Out</button></li>
+        <li><span className='text-lime-600'>UserName:{user?.displayName}</span></li>
+        </>
+         : <li><Link to='/login'>Login</Link></li>}
 
 
 
@@ -74,7 +76,7 @@ const Navbar = () => {
                     {user &&  <Link >
                     <div className="avatar w-1/2 mt-2 pe-3">
                         <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            {/* <img src={''} /> */}
+                            <img className='w-[50px] h-[50px]' src={user.photo} />
                         </div>
                     </div>
                     </Link>}

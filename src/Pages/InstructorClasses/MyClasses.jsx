@@ -33,20 +33,7 @@ const MyClasses = () => {
             )
             
             }
-           
-            
-            
-            
-            
-
-           
-                
-                
-                
-                
-             
-
-            
+  
         </section>
         
     );

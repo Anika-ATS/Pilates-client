@@ -47,36 +47,6 @@ const Register = () => {
     }
 
 
-
- 
-    //getting form value
-    // const handleSignUp= event =>{
-    //     event.preventDefault();
-    //     const form=event.target;
-    //     const name=form.name.value;
-    //     const email=form.email.value;
-
-    //     const password=form.password.value;
-    //     const photo=form.photo.value;
-
-    //    console.log(name,password,email, photo);
-
-    //     //create user
-    //      createUser(email,password)
-    //         .then(result=>{
-    //             const createdUser=result.user;
-    //             console.log(createdUser);
-    //         })
-    //         .catch(error=>{
-    //             console.log(error);
-    //         })
-    //    }
-
-
-
-
-
-
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
