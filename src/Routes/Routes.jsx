@@ -30,7 +30,9 @@ import Register from "../Pages/Login/Register";
 import DashBoardS from "../Layout/DashBoardS";
 import InsTructorDAShboard from "../Pages/Dashboard/InstructorDashboard/InsTructorDAShboard";
 import NaddACls from "../Pages/Dashboard/InstructorDashboard/NaddACls";
-// import AddClass from "../Pages/Dashboard/InstructorDashboard/AddClass";
+import AdminDashBoard from "../Layout/AdminDashBoard";
+import AdminClasses from "../Pages/Dashboard/AdminsDashboard/AdminClasses";
+
 
  export const router = createBrowserRouter([
     {
@@ -78,6 +80,19 @@ import NaddACls from "../Pages/Dashboard/InstructorDashboard/NaddACls";
        
         
        
+      
+      ]
+    },
+
+    //admin panel
+    {
+      path: "/dashboard2",
+      element:<AdminDashBoard></AdminDashBoard>,
+      children:[
+        {
+           path:'adminCls',
+           element:<AdminClasses></AdminClasses>
+        }
       
       ]
     },

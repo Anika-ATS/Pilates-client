@@ -18,19 +18,10 @@ const Navbar = () => {
         
 
         {user?.email ?<>
-        <li><Link  to='/dashboard/instructorD'>Intructor Dashboard</Link></li>
-        <li><Link>Admin Dasboard</Link></li> 
-        <li><Link>Student Dasboard</Link></li> 
-        {/* <li tabIndex={0}>
-        <details>
-          <summary>Instructor Dashboard</summary>
-          <ul className="p-2 z-50">                       
-          <li><Link to='/MyCls'>My Classes</Link></li>
-          <li><Link to='/addAclass'>Add a Class</Link></li>
-          </ul>
-        </details>
+        <li><Link  to='/dashboard'>Intructor Dashboard</Link></li>
+        <li><Link  to='/dashboard2'>Admin Dasboard</Link></li> 
+        <li><Link  to='/dashboard3'>Student Dasboard</Link></li> 
         
-        </li> */}
         
         <li><button onClick={handleLogOut}>Log Out</button></li>
         <li><span className='text-lime-600'>UserName:{user?.displayName}</span></li>

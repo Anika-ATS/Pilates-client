@@ -10,15 +10,15 @@ const AdminDashBoard = () => {
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
-            <div className="drawer-side bg-green-500">
+            <div className="drawer-side bg-gray-400">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full mt-24">
                     {/* Sidebar content here */}
                     <li><NavLink to=''><FaHome></FaHome>User Home</NavLink></li>
                    
-                    <li><NavLink to='/'><FaChalkboard></FaChalkboard>Manage Classes</NavLink></li>
+                    <li><NavLink to='/dashboard2/adminCls'><FaChalkboard></FaChalkboard>Manage Classes</NavLink></li>
                     
-                    <li><NavLink to=''><FaChalkboard></FaChalkboard></NavLink></li>
+                    
                     <div className="divider"></div>
                     <li><NavLink to='/'><FaHome></FaHome>Home</NavLink></li>
                     

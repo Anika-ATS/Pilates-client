@@ -7,15 +7,18 @@ const DashBoardS = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
                 {/* Page content here */}
-                <Outlet></Outlet>
+                <Outlet>
+                    <h1>jj</h1>
+                </Outlet>
                 <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
             </div>
-            <div className="drawer-side bg-green-500">
+            
+            <div className="drawer-side bg-green-400">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full mt-24">
                     {/* Sidebar content here */}
-                    <li><NavLink to=''><FaHome></FaHome>User Home</NavLink></li>
+                    <li><NavLink to='/dashboard'><FaHome></FaHome>User Home</NavLink></li>
                    
                     <li><NavLink to='/dashboard/NAddaClass'><FaChalkboard></FaChalkboard>Add a Class</NavLink></li>
                     
