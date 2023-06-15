@@ -10,6 +10,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
 import AddClass from "../Pages/InstructorClasses/AddClass";
 import MyClasses from "../Pages/InstructorClasses/MyClasses";
+import PrivateRoute from '../Routes/PrivateRoute';
 
  export const router = createBrowserRouter([
     {
@@ -43,7 +44,8 @@ import MyClasses from "../Pages/InstructorClasses/MyClasses";
         },
         {
           path:'MyCls',
-          element:<MyClasses></MyClasses>
+          
+          element:<PrivateRoute> <MyClasses></MyClasses></PrivateRoute>        
 
         },
        

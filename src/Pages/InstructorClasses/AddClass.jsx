@@ -1,17 +1,21 @@
+// import { useContext } from "react";
+// import { AuthContext } from "../../Providers/AuthProviders";
 
 // import swal from 'sweetalert2';
 const AddClass = () => {
-    
+        //  const { user} = useContext(AuthContext);
         const handleOnSubmit=event=>{
             event.preventDefault();
             const form=event.target;
             
             const name=form.name.value;
             const photo=form.photo.value;
+            // const Iname=user.displayName;
             const Iname=form.Iname.value;
             const email=form.email.value;           
             const price=form.price.value;              
             const seat=form.seat.value;
+            const status=form.status.value;
             
             const add={
                 Iname,
@@ -19,7 +23,7 @@ const AddClass = () => {
                 email,
                 photo,                
                 price,
-                seat
+                seat,status
           
     
             }
@@ -77,14 +81,14 @@ const AddClass = () => {
                         <label className="label">
                             <span className="label-text">Instructor Name</span>
                         </label>
-                        <input type="text" placeholder="Name" name='Iname' className="input input-bordered" />
+                        <input type="text"  placeholder="Instructor Name" name='Iname' className="input input-bordered"  />
     
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Instructor Email</span>
                         </label>
-                        <input type="text" placeholder="Email" name='email'  className="input input-bordered" />
+                        <input type="text" placeholder="Instructor Email" name='email'  className="input input-bordered" />
     
                     </div>
                     {/* <div className="form-control">
@@ -110,6 +114,14 @@ const AddClass = () => {
                         </label>
                         <input type="text" placeholder="Seat" name='seat' className="input input-bordered" />
     
+                    </div>
+                    {/* //status */}
+                    <div className="form-control ">
+                    <label className="label">
+                            <span className="label-text">Status</span>
+                        </label>
+    
+                        <input placeholder="Pending"  type='text' name='status' className="input input-bordered" />
                     </div>
                     
     

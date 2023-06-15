@@ -7,8 +7,7 @@ const AllTeacher = ({item1}) => {
             <img className="object-cover w-[160px] h-[150px] mt-0"  src={picture}  alt="" />
             </figure>
             <div className="mt-9">
-                <h3 >
-                    Name:<span className="4xl text-green-600 ">{name}</span></h3>
+                <h3>Name:<span className="4xl text-green-600 ">{name}</span></h3>
                 <p>Email:{email}</p>
                 <p>Class:{Class}</p>
                 <p>Catagory:{Catagory}</p>
