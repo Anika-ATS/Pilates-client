@@ -25,15 +25,37 @@ const Register = () => {
                 console.log(createdUser);
                 udateUserProfile(data.name,data.photo)
                 .then(() => {
-                    console.log('Profile updated!');
-                    reset();
-                    logOut()
-                    .then(()=>{
-                        navigate ('/login');
+                   
+                    //created user manage  in db
+                    const saveUser={name:data.name,email:data.email,photo:data.photo}
+                    fetch('http://localhost:5000/users',{
+                        method:'POST',
+                        headers:{
+                           'content-type':'application/json'
+                        },
+                        body:JSON.stringify(saveUser)
+                    }
+                    
+                    
+                    
+                    )
+                    .then(res=>res.json())
+                    .then(data=>{
+
+                        if(data.insertedId){
+                            // console.log('Profile updated!');
+                            reset();
+                            logOut()
+                            .then(()=>{
+                                navigate ('/login');
+                            })
+                            .catch(error => console.log(error));
+
+
+
+                        }
                     })
-                    .catch(error => console.log(error));
-                    
-                    
+  
                   })
                   .catch(error =>  console.log(error));
                     
@@ -45,6 +67,36 @@ const Register = () => {
     
     
     }
+
+
+
+ 
+    //getting form value
+    // const handleSignUp= event =>{
+    //     event.preventDefault();
+    //     const form=event.target;
+    //     const name=form.name.value;
+    //     const email=form.email.value;
+
+    //     const password=form.password.value;
+    //     const photo=form.photo.value;
+
+    //    console.log(name,password,email, photo);
+
+    //     //create user
+    //      createUser(email,password)
+    //         .then(result=>{
+    //             const createdUser=result.user;
+    //             console.log(createdUser);
+    //         })
+    //         .catch(error=>{
+    //             console.log(error);
+    //         })
+    //    }
+
+
+
+
 
 
     return (

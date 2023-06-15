@@ -3,6 +3,18 @@
 //   element:<AddClass></AddClass>
 
 // },
+// {
+//   path:'addAclass',
+//   element:<AddClass></AddClass>
+// },
+
+
+// {
+//   path:'MyCls',
+  
+//   element:<PrivateRoute> <MyClasses></MyClasses></PrivateRoute>        
+
+// },
 import {
     createBrowserRouter,
    
@@ -12,9 +24,9 @@ import Home from "../Pages/Home/Home/Home";
 import Teacher from "../Pages/Home/Teacher/Teacher";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
-import AddClass from "../Pages/InstructorClasses/AddClass";
-import MyClasses from "../Pages/InstructorClasses/MyClasses";
-import PrivateRoute from '../Routes/PrivateRoute';
+// import AddClass from "../Pages/InstructorClasses/AddClass";
+// import MyClasses from "../Pages/InstructorClasses/MyClasses";
+// import PrivateRoute from '../Routes/PrivateRoute';
 import DashBoardS from "../Layout/DashBoardS";
 import InsTructorDAShboard from "../Pages/Dashboard/InstructorDashboard/InsTructorDAShboard";
 import NaddACls from "../Pages/Dashboard/InstructorDashboard/NaddACls";
@@ -44,19 +56,8 @@ import NaddACls from "../Pages/Dashboard/InstructorDashboard/NaddACls";
           path:'register',
           element:<Register></Register>
 
-        },
-        {
-          path:'addAclass',
-          element:<AddClass></AddClass>
-        },
-       
+        }
         
-        {
-          path:'MyCls',
-          
-          element:<PrivateRoute> <MyClasses></MyClasses></PrivateRoute>        
-
-        },
        
       
       ]
