@@ -12,27 +12,37 @@ const Navbar = () => {
 
 
     const NavItems = <>
-        <li><Link to='/' className='ml-9'>Home</Link></li>
-        <li><Link to='/instructors'>Instructors</Link></li>
+        <li><Link to='/' className='ml-10 text-fuchsia-950 font-bold'>Home</Link></li>
+        <li><Link to='/instructors' className=' text-fuchsia-950 font-bold'>Instructors</Link></li>
+        <li><Link to='/Approved'><span className=' text-fuchsia-950 font-bold' >Classes</span> </Link></li>
 
-        
 
-        {user?.email ?<>
-        <li><Link  to='/dashboard'>Intructor Dashboard</Link></li>
-        <li><Link  to='/dashboard2'>Admin Dasboard</Link></li> 
-        <li><Link  to='/dashboard3'>Student Dasboard</Link></li> 
-        
-        
-        <li><button onClick={handleLogOut}>Log Out</button></li>
-        <li><span className='text-lime-600'>UserName:{user?.displayName}</span></li>
+
+        {user?.email ? <>
+
+            <li tabIndex={0}>
+                <details className=' text-fuchsia-950 font-bold'>
+                    <summary>Dashboard</summary>
+                    <ul className="p-2 z-50">
+                        <li><Link to='/dashboard'>Intructor Dashboard</Link></li>
+                        <li><Link to='/dashboard2'>Admin Dasboard</Link></li>
+                        <li><Link to='/dashboard3'>Student Dasboard</Link></li>
+                    </ul>
+                </details>
+            </li>
+            
+
+
+            <li><button onClick={handleLogOut} className=' text-fuchsia-950 font-bold'>Log Out</button></li>
+            <li><span className='text-fuchsia-950 font-bold'>UserName:{user?.displayName}</span></li>
         </>
-         : <li><Link to='/login'>Login</Link></li>}
+            : <li><Link to='/login' className=' text-fuchsia-950 font-bold'>Login</Link></li>}
 
 
 
-        
-        
-         </>
+
+
+    </>
     return (
 
         <div className="navbar bg-base-100">
@@ -59,17 +69,17 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {NavItems}
-                    
+
                 </ul>
             </div>
             <div className="navbar-end flex flex-row">
                 <div className='flex justify-between  '>
-                    {user &&  <Link >
-                    <div className="avatar w-1/2 mt-2 pe-3">
-                        <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img className='w-[50px] h-[50px]' src={user.photo} />
+                    {user && <Link >
+                        <div className="avatar w-1/2 mt-2 pe-3">
+                            <div className="w-14 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                <img className='w-[50px] h-[50px]' src={user.photo} />
+                            </div>
                         </div>
-                    </div>
                     </Link>}
 
 

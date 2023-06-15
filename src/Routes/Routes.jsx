@@ -32,6 +32,7 @@ import InsTructorDAShboard from "../Pages/Dashboard/InstructorDashboard/InsTruct
 import NaddACls from "../Pages/Dashboard/InstructorDashboard/NaddACls";
 import AdminDashBoard from "../Layout/AdminDashBoard";
 import AdminClasses from "../Pages/Dashboard/AdminsDashboard/AdminClasses";
+import AllCls from "../Pages/AllClasses/AllCls";
 
 
  export const router = createBrowserRouter([
@@ -44,6 +45,11 @@ import AdminClasses from "../Pages/Dashboard/AdminsDashboard/AdminClasses";
             element:<Home></Home>
 
         },
+        {
+          path:'/Approved',
+          element:<AllCls></AllCls>
+
+      },
         {
           path:'/instructors',
           element:<Teacher></Teacher>
