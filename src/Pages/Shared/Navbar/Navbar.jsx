@@ -4,7 +4,8 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProviders';
 const Navbar = () => {
 
-    const isAdmin= true;
+    // const isAdmin= true;
+    const isInstructor= true;
     const { user, logOut } = useContext(AuthContext);
     const handleLogOut = () => {
         logOut()
@@ -26,15 +27,19 @@ const Navbar = () => {
                 <details className=' text-fuchsia-950 font-bold'>
                     <summary>Dashboard</summary>
                     <ul className="p-2 z-50">
-                     {isAdmin?<>
+                     {/* {isAdmin?<> */}
                         <li><Link to='/dashboard2'>Admin Dasboard</Link></li>
-                     </>:
-                     <>
+                     {/* </>:
+                     <> */}
+                      {/* {isInstructor?<> */}
                      <li><Link to='/dashboard'>Intructor Dashboard</Link></li>
+                     {/* </> */}
+                    {/* //  : */}
                      
                      <li><Link to='/dashboard3'>Student Dasboard</Link></li>
-                     </>
-                     } 
+                    {/* //  } */}
+                     {/* </> */}
+                    {/* } */}
                        
                     </ul>
                 </details>

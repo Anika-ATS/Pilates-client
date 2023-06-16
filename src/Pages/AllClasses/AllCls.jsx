@@ -1,10 +1,23 @@
 import React from 'react';
+import useApprovecls from '../../hooks/useApprovecls';
+import DisPAllcls from './DisPAllcls';
 
 const AllCls = () => {
+    const [AproveClasses]=useApprovecls();
     return (
-        <div>
-            <h1>Approved cls</h1>
-        </div>
+        <section>
+        {AproveClasses.map(Acls=><DisPAllcls
+         key={Acls._id}
+         Acls={Acls}></DisPAllcls>
+        
+     
+        
+       
+        )
+        
+        }
+
+    </section>
     );
 };
 
