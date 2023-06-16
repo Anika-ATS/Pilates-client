@@ -9,7 +9,7 @@ const useClasses = () => {
     const [MyClasses, setMyClasses] = useState([]);
     const [loading, setLoading] = useState(true);
     
-    const url = `http://localhost:5000/NAddaClass?email=${user?.email}`;
+    const url = `https://y-opal-kappa.vercel.app/NAddaClass?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url)

@@ -28,7 +28,7 @@ const NaddACls = () => {
         // console.log(Sname,name,email, url,subCategory,price,stock,rating);
     
        console.log(add);
-       fetch('http://localhost:5000/NAddaClass',{
+       fetch('https://y-opal-kappa.vercel.app/NAddaClass',{
            method:'POST',
            headers:{
               'content-type':'application/json'

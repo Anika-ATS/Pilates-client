@@ -6,7 +6,7 @@ const DisplayAcls = ({ cls2 }) => {
 
     const handleApprove = cls2=> {
 
-        fetch('http://localhost:5000/ApproveCls',{
+        fetch('https://y-opal-kappa.vercel.app/ApproveCls',{
             method:'POST',
             headers:{
                'content-type':'application/json'

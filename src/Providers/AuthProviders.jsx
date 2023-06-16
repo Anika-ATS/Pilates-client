@@ -53,7 +53,7 @@ const AuthProviders = ({children}) => {
             //set jwt set and get toekn
             if(LoggedInUser)
             {
-                axios.post('http://localhost:5000/jwt',{email:LoggedInUser.email})
+                axios.post('https://y-opal-kappa.vercel.app/jwt',{email:LoggedInUser.email})
                 .then(data=>{
                     // console.log(data.data.token)
                     localStorage.setItem('access-token',data.data.token)

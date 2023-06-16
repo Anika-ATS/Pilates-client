@@ -6,7 +6,7 @@ const useAllClasses = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:5000/NAddaClass")
+        fetch("https://y-opal-kappa.vercel.app/NAddaClass")
 
             .then(res => res.json())
             .then(data =>{

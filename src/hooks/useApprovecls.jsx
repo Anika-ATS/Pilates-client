@@ -6,7 +6,7 @@ const useApprovecls = () => {
  const [loading, setLoading] = useState(true);
 
  useEffect(() => {
-     fetch("http://localhost:5000/ApproveCls")
+     fetch("https://y-opal-kappa.vercel.app/ApproveCls")
 
          .then(res => res.json())
          .then(data =>{
