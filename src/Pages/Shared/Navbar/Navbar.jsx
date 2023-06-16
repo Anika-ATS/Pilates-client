@@ -24,8 +24,10 @@ const Navbar = () => {
                 <details className=' text-fuchsia-950 font-bold'>
                     <summary>Dashboard</summary>
                     <ul className="p-2 z-50">
-                        <li><Link to='/dashboard'>Intructor Dashboard</Link></li>
+
                         <li><Link to='/dashboard2'>Admin Dasboard</Link></li>
+                        <li><Link to='/dashboard'>Intructor Dashboard</Link></li>
+                        
                         <li><Link to='/dashboard3'>Student Dasboard</Link></li>
                     </ul>
                 </details>

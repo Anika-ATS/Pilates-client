@@ -33,6 +33,9 @@ import NaddACls from "../Pages/Dashboard/InstructorDashboard/NaddACls";
 import AdminDashBoard from "../Layout/AdminDashBoard";
 import AdminClasses from "../Pages/Dashboard/AdminsDashboard/AdminClasses";
 import AllCls from "../Pages/AllClasses/AllCls";
+import StudentsDashboard from "../Layout/StudentsDashboard";
+import MySClses from "../Pages/Dashboard/StudentsDasBoard/MySClses";
+import DisplayEnrolledC from "../Pages/Dashboard/StudentsDasBoard/DisplayEnrolledC";
 
 
  export const router = createBrowserRouter([
@@ -70,6 +73,20 @@ import AllCls from "../Pages/AllClasses/AllCls";
       
       ]
     },
+    
+    //admin panel
+    {
+      path: "/dashboard2",
+      element:<AdminDashBoard></AdminDashBoard>,
+      children:[
+        {
+           path:'adminCls',
+           element:<AdminClasses></AdminClasses>
+        }
+      
+      ]
+    },
+    //Instrustor panel
     {
       path: "/dashboard",
       element:<DashBoardS></DashBoardS>,
@@ -89,17 +106,26 @@ import AllCls from "../Pages/AllClasses/AllCls";
       
       ]
     },
-
-    //admin panel
+    //students panel
     {
-      path: "/dashboard2",
-      element:<AdminDashBoard></AdminDashBoard>,
+      path: "/dashboard3",
+      element:<StudentsDashboard></StudentsDashboard>,
       children:[
         {
-           path:'adminCls',
-           element:<AdminClasses></AdminClasses>
+           path:'StudentsCart',
+           element:<MySClses></MySClses>
+        },
+        {
+          path:'StudentsShowCart',
+          element:<DisplayEnrolledC></DisplayEnrolledC>
         }
+
       
       ]
     },
+
+
+
+
+
   ]);
