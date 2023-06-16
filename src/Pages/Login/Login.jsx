@@ -9,6 +9,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 // , useLocation, useNavigate, LoadCanvasTemplateNoReload, validateCaptcha 
 
 import { AuthContext } from '../../Providers/AuthProviders';
+import SocialLogin from '../Shared/Social Login/SocialLogin';
 
 const Login = () => {
     // useEffect(() => {
@@ -101,11 +102,12 @@ const Login = () => {
 
 
 
-                                <div><button className="btn btn-outline btn-primary">Google Sign-in</button></div>
+                               
                                 <div className="form-control mt-6">
 
                                     <input className="btn btn-primary" type='submit' value='Login' />
                                 </div>
+                                <SocialLogin></SocialLogin>
                             </div>
                         </div>
                     </form>
