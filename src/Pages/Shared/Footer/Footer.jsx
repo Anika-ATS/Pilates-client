@@ -24,7 +24,7 @@ const Footer = () => {
                 <div className="modal">
                     <div className="modal-box relative">
                         <label htmlFor="my-modal-3" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                        <h3 className="text-lg font-bold">Congratulations Nyama Hoard user!</h3>
+                        <h3 className="text-lg font-bold">Hello Pilates Butterflys!</h3>
                         <p className="py-4">We're dedicated to serve our people with differents kinds of classes .We haven't any other brach .</p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const Footer = () => {
 
             </a>
             <a className=" mt-14 text-purple-800 text-lg">Home</a>
-            <a className=" mt-14 text-purple-800 text-lg">Blog</a>
+            
             <a className=" mt-14 text-purple-800 text-lg">
                 {/* The button to open modal */}
                 <label htmlFor="my-modal-5" >Contact Us</label>
