@@ -1,6 +1,8 @@
-import { FaChalkboard, FaChalkboardTeacher, FaHome } from 'react-icons/fa';
+import { FaChalkboard, FaChalkboardTeacher, FaHome,FaUsers } from 'react-icons/fa';
 import { NavLink, Outlet } from "react-router-dom";
 const AdminDashBoard = () => {
+
+    
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
@@ -14,9 +16,10 @@ const AdminDashBoard = () => {
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 h-full mt-24">
                     {/* Sidebar content here */}
-                    <li><NavLink to=''><FaHome></FaHome>Manage All Users </NavLink></li>
+                    <li><NavLink to=''><FaHome></FaHome>Home</NavLink></li>
                    
                     <li><NavLink to='/dashboard2/adminCls'><FaChalkboard></FaChalkboard>Manage Classes</NavLink></li>
+                    <li><NavLink to='/dashboard2/AllUsers'><FaUsers></FaUsers>Manage All Users </NavLink></li>
                     
                     
                     <div className="divider"></div>

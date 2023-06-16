@@ -14,10 +14,12 @@ const Register = () => {
 
         formState: { errors },
     } = useForm();
-    const navigate=useNavigate();
+       const navigate=useNavigate();
        const {createUser,udateUserProfile,logOut}=useContext(AuthContext);
+
+
     const onSubmit = (data) =>{ 
-        console.log(data),
+        // console.log(data),
         //create user
          createUser(data.email,data.password)
             .then(result=>{
@@ -26,8 +28,9 @@ const Register = () => {
                 udateUserProfile(data.name,data.photo)
                 .then(() => {
                    
-                    //created user manage  in db
+                    // created user manage  in db
                     const saveUser={name:data.name,email:data.email,photo:data.photo}
+                    // console.log(saveUser)
                     fetch('http://localhost:5000/users',{
                         method:'POST',
                         headers:{

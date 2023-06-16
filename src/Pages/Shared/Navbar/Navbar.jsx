@@ -3,6 +3,8 @@ import logo from '../../../assets/img/logo.jpg';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProviders';
 const Navbar = () => {
+
+    // const isAdmin= true;
     const { user, logOut } = useContext(AuthContext);
     const handleLogOut = () => {
         logOut()
@@ -24,7 +26,10 @@ const Navbar = () => {
                 <details className=' text-fuchsia-950 font-bold'>
                     <summary>Dashboard</summary>
                     <ul className="p-2 z-50">
-
+                     {/* {isAdmin?<>
+                     </>:
+                     <></>
+                     } */}
                         <li><Link to='/dashboard2'>Admin Dasboard</Link></li>
                         <li><Link to='/dashboard'>Intructor Dashboard</Link></li>
                         
