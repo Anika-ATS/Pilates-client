@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+import { FaTrashAlt, FaUserShield,FaChalkboardTeacher } from "react-icons/fa";
 import Swal from 'sweetalert2'
 
 const AllUsers = () => {
@@ -34,6 +34,26 @@ const AllUsers = () => {
                 }
             })
     }
+  //handle instructor
+   const handleInstructor= user => {
+        fetch(`http://localhost:5000/users/instructor/${user._id}`, { method: 'PATCH' })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if (data.modifiedCount) {
+                refetch();
+                
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `${user.name} is an instructor now`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+
+            }
+        })
+}
 
 
 
@@ -75,12 +95,35 @@ const AllUsers = () => {
                                         </div>
                                     </td>
                                     <td>{user.email}</td>
-                                    <td>{user.role === 'admin' ? 'admin' :
-                                        <button onClick={() => handleAdmin(user)}
-                                            className="btn btn-ghost bg-blue-500 text-white btn-xs ">
+                                    <td><div className="flex items-center space-x-3">
+                                        {/*admin btn */}
+                                        
+                                         <div>
+                                         {user.role === 'admin' ? 'admin' :
+                                   
+                                          <button onClick={() => handleAdmin(user)}
+                                           className="btn btn-ghost bg-blue-500 text-white btn-xs ">
 
-                                            <FaUserShield></FaUserShield>
-                                        </button>}</td>
+                                           <FaUserShield></FaUserShield>
+                                         </button>}
+                                         </div>
+                                         {/* instructor btn */}
+                                         <div>
+                                         {user.role === 'instructor' ? 'instructor' :
+                                   
+                                         <button onClick={() => handleInstructor(user)}
+                                          className="btn btn-ghost bg-blue-500 text-white btn-xs ">
+
+                                          <FaChalkboardTeacher></FaChalkboardTeacher>
+                                         </button>}
+
+
+                                         </div>
+                                    </div>
+                                   
+                                        
+                                        
+                                    </td>
                                     <td>
                                         <button onClick={() => handleDelete(user)}
                                             className="btn btn-ghost bg-red-500 text-white btn-xs ">

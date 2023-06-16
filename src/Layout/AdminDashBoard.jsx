@@ -1,9 +1,11 @@
 import { FaChalkboard, FaChalkboardTeacher, FaHome,FaUsers } from 'react-icons/fa';
-import { NavLink, Outlet } from "react-router-dom";
+import {  NavLink, Outlet } from "react-router-dom";
 const AdminDashBoard = () => {
 
+    // const isAdmin= true
     
     return (
+        
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-center">
@@ -31,8 +33,7 @@ const AdminDashBoard = () => {
                 </ul>
 
             </div>
-        </div>
-    );
+        </div>)
 };
 
 export default AdminDashBoard;
