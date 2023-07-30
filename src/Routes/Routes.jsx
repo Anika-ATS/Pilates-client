@@ -1,20 +1,4 @@
-// //  {
-//   path:'addAclass',
-//   element:<AddClass></AddClass>
 
-// },
-// {
-//   path:'addAclass',
-//   element:<AddClass></AddClass>
-// },
-
-
-// {
-//   path:'MyCls',
-  
-//   element:<PrivateRoute> <MyClasses></MyClasses></PrivateRoute>        
-
-// },
 import {
     createBrowserRouter,
    
@@ -38,6 +22,9 @@ import StudentsDashboard from "../Layout/StudentsDashboard";
 import DisplayEnrolledC from "../Pages/Dashboard/StudentsDasBoard/DisplayEnrolledC";
 import AllUsers from "../Pages/Dashboard/AdminsDashboard/AllUsers";
 import AllCart from "../Pages/Dashboard/StudentsDasBoard/AllCart";
+import AllPayment from "../Pages/Dashboard/StudentsDasBoard/AllPayment";
+import Checkout from "../Pages/Dashboard/StudentsDasBoard/Payment/Checkout";
+
 
 
  export const router = createBrowserRouter([
@@ -126,6 +113,11 @@ import AllCart from "../Pages/Dashboard/StudentsDasBoard/AllCart";
         {
           path:'StudentsShowCart',
           element:<DisplayEnrolledC></DisplayEnrolledC>
+        },
+        
+        {
+          path:'Allpayment',
+          element:<AllPayment></AllPayment>
         }
 
       
