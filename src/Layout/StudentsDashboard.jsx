@@ -1,4 +1,5 @@
 import { FaChalkboard, FaChalkboardTeacher, FaHome } from 'react-icons/fa';
+import { BsCartPlus } from 'react-icons/bs';
 import { NavLink, Outlet } from "react-router-dom";
 
 const StudentsDashboard = () => {
@@ -17,7 +18,10 @@ const StudentsDashboard = () => {
                     {/* Sidebar content here */}
                     <li><NavLink to=''><FaHome></FaHome>Students Home</NavLink></li>
                    
-                    <li><NavLink to='/dashboard3/StudentsCart'><FaChalkboard></FaChalkboard>My Selected Classes</NavLink></li>
+                    <li><NavLink to='/dashboard3/StudentsCart'>
+                        <BsCartPlus></BsCartPlus>
+                        
+                        My Selected Classes</NavLink></li>
                     <li><NavLink to='/dashboard3/StudentsShowCart'><FaChalkboard></FaChalkboard>My Enrolled Classes</NavLink></li>
                     
                     

@@ -57,6 +57,7 @@ const NaddACls = () => {
             <h1 className='mt-5 pt-3  text-center text-lime-600 text-bold text-4xl hover:opacity-75 hover:bg-base-600 mb-5'>Add a Class </h1></div>
             {/* onSubmit={handleOnSubmit} */}
             <form onSubmit={handleOnSubmit} >
+                
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5  " >
             
                 

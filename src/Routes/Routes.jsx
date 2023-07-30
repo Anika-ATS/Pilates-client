@@ -34,9 +34,10 @@ import AdminDashBoard from "../Layout/AdminDashBoard";
 import AdminClasses from "../Pages/Dashboard/AdminsDashboard/AdminClasses";
 import AllCls from "../Pages/AllClasses/AllCls";
 import StudentsDashboard from "../Layout/StudentsDashboard";
-import MySClses from "../Pages/Dashboard/StudentsDasBoard/MySClses";
+// import MySClses from "../Pages/Dashboard/StudentsDasBoard/MySClses";
 import DisplayEnrolledC from "../Pages/Dashboard/StudentsDasBoard/DisplayEnrolledC";
 import AllUsers from "../Pages/Dashboard/AdminsDashboard/AllUsers";
+import AllCart from "../Pages/Dashboard/StudentsDasBoard/AllCart";
 
 
  export const router = createBrowserRouter([
@@ -120,7 +121,7 @@ import AllUsers from "../Pages/Dashboard/AdminsDashboard/AllUsers";
       children:[
         {
            path:'StudentsCart',
-           element:<MySClses></MySClses>
+           element:<AllCart></AllCart>
         },
         {
           path:'StudentsShowCart',
