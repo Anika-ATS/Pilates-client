@@ -38,9 +38,7 @@ const Register = () => {
                         },
                         body:JSON.stringify(saveUser)
                     }
-                    
-                    
-                    
+                                       
                     )
                     .then(res=>res.json())
                     .then(data=>{

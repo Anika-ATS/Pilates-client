@@ -1,7 +1,9 @@
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 
 const DisPAllcls = ({Acls}) => {
     const {_id, Iname,name,photo,price,seat} = Acls;
+    const navigate = useNavigate();
 
   
     const handleApprove =Acls=> {
@@ -26,8 +28,28 @@ const DisPAllcls = ({Acls}) => {
                     timer: 1500
                   })
             }
+            else {
+                // Handle the case where data.insertedId is falsy or not present
+                // This could mean an error occurred or the response was unexpected
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                });
+            }
 
         })
+        .catch(error => {
+            // Handle any errors that occurred during the fetch operation
+            console.error('Error:', error);
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong! Please login',
+            });
+            navigate('/login');
+       
+        });
 
     }
 

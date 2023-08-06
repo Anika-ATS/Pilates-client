@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { FaGoogle } from "react-icons/fa";
+import { FaGoogle,FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import { useLocation, useNavigate } from "react-router-dom";
 
 
 const SocialLogin = () => {
-    const{googlepSignIn}=useContext(AuthContext);
+    const{googlepSignIn }=useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     // console.log('bye',location);
@@ -22,17 +22,25 @@ const SocialLogin = () => {
         })
 
     }
+   
 
     return (
         <div>
-            <div className="flex flex-col w-full border-opacity-50">
+            <div className="flex flex-col w-full border-opacity-50 ">
                 
-                <div className="divider"></div>
-                <p className="mx-auto text-fuchsia-950 font-bold mb-3">Social Sign in</p>
+                <div className="divider">
+                    
+                </div>
+                
                 <div className="mx-auto">
-                    <button onClick={handleGoogleSignIn} className="btn btn-outline btn-primary ">
+                    <button onClick={handleGoogleSignIn} className=" btn btn-outline btn-primary ">
                     <FaGoogle></FaGoogle>
-                    </button></div>
+                    </button>
+                    
+
+                    
+                </div>
+             
                 
             </div>
         </div>
