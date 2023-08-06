@@ -22,6 +22,12 @@ const Register = () => {
 
 
 
+
+    const handleCategoryChange = (selectedValue) => {
+        console.log('Selected category:', selectedValue);
+      
+      };
+    
     const { createUser, udateUserProfile, logOut } = useContext(AuthContext);
     const selectedCategory = watch("category");
 
@@ -134,7 +140,7 @@ const Register = () => {
                                                 Please select a category
                                             </option>
                                             <option value="Instructor">Instructor</option>
-                                            <option value="Student">user</option>
+                                            <option value="Student">Patient</option>
                                         </select>
                                     )}
                                 />
