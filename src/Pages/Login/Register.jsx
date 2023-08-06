@@ -13,6 +13,7 @@ const Register = () => {
         reset,
         control,
         watch,
+        setValue,
 
 
         formState: { errors },
@@ -23,10 +24,10 @@ const Register = () => {
 
 
 
-    const handleCategoryChange = (selectedValue) => {
-        console.log('Selected category:', selectedValue);
+    // const handleCategoryChange = (selectedValue) => {
+    //     console.log('Selected category:', selectedValue);
       
-      };
+    //   };
     
     const { createUser, udateUserProfile, logOut } = useContext(AuthContext);
     const selectedCategory = watch("category");
@@ -104,7 +105,13 @@ const Register = () => {
 
 
 
-        }
+        };
+        const handleCategoryChange = value => {
+            // Reset the yourformdesignation value if the category is not "doctor"
+            if (value !== "doctor") {
+              setValue("yourformdesignation", "");
+            }
+          };
 
         return (
             <div className="hero min-h-screen bg-base-200">
@@ -140,7 +147,7 @@ const Register = () => {
                                                 Please select a category
                                             </option>
                                             <option value="Instructor">Instructor</option>
-                                            <option value="Student">Patient</option>
+                                            <option value="Student">Student</option>
                                         </select>
                                     )}
                                 />
