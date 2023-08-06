@@ -133,8 +133,8 @@ const Register = () => {
                                             <option value="DEFAULT" disabled>
                                                 Please select a category
                                             </option>
-                                            <option value="Instructor">Doctor</option>
-                                            <option value="Student">Patient</option>
+                                            <option value="Instructor">Instructor</option>
+                                            <option value="Student">user</option>
                                         </select>
                                     )}
                                 />

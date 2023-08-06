@@ -10,9 +10,9 @@ const AllUsers = () => {
         return res.json();
     })
     //dlete user
-    const handleDelete = user => {
+    // const handleDelete = user => {
 
-    }
+    // }
 
     //handle admin
     const handleAdmin = user => {
@@ -102,7 +102,11 @@ const AllUsers = () => {
                                          {user.role === 'admin' ? 'admin' :
                                    
                                           <button onClick={() => handleAdmin(user)}
-                                           className="btn btn-ghost bg-blue-500 text-white btn-xs ">
+                                       
+                                           className="btn btn-ghost bg-blue-500 text-white btn-xs "
+                                        //    disabled={user.role.includes('admin')}
+                                           
+                                           >
 
                                            <FaUserShield></FaUserShield>
                                          </button>}
@@ -112,6 +116,8 @@ const AllUsers = () => {
                                          {user.role === 'instructor' ? 'instructor' :
                                    
                                          <button onClick={() => handleInstructor(user)}
+                                        
+                                     
                                           className="btn btn-ghost bg-blue-500 text-white btn-xs ">
 
                                           <FaChalkboardTeacher></FaChalkboardTeacher>

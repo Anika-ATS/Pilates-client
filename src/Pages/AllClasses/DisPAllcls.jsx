@@ -74,8 +74,8 @@ const DisPAllcls = ({ Acls, loggedIn, role }) => {
     return (
         <div>
 
-            className={`hero h-[500px] mx-auto bg-base-200 mt-7 mb-7 ${seat === 0 ? 'bg-red-500' : ''
-                }`}
+           <div className={`hero h-[500px] mx-auto bg-base-200 mt-7 mb-7 ${seat === 0 ? 'bg-red-500' : ''
+                }`}>
             <div className=" hero-content flex-col lg:flex-row-reverse">
                 <img src={photo} className="max-w-sm rounded-lg shadow-2xl" />
                 <div>
@@ -108,8 +108,9 @@ const DisPAllcls = ({ Acls, loggedIn, role }) => {
                 </div>
             </div>
         </div>
+    </div>
 
-        // </div >
+        
     );
 };
 
