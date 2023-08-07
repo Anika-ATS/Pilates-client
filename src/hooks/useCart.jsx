@@ -10,6 +10,7 @@ const useCart = () => {
          .then(res => res.json())
          .then(data =>{
             setCartClasses(data);
+            console.log(data)
              setLoading(false)
          } )
 

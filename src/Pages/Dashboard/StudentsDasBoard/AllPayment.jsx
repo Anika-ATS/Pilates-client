@@ -5,7 +5,10 @@ import Checkout from "./Payment/Checkout";
 import { loadStripe } from "@stripe/stripe-js";
 import useCart from "../../../hooks/useCart";
 
-const stripePromise = loadStripe(' import.meta.env.VITE_Payment_Pk');
+// const stripePromise = loadStripe(' import.meta.env.VITE_Payment_Pk');
+// const stripePromise = loadStripe(' payId');
+const stripePromise = loadStripe("your_stripe_publishable_key_here");
+
 const AllPayment = () => {
     const [CartClasses]=useCart();
     const price=CartClasses.reduce((sum,item)=>sum+item.price,0);

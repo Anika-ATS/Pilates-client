@@ -106,7 +106,7 @@ const Checkout = ({price}) => {
                         },
                     }}
                 />
-                <button type="submit" className="mt-5 mx-auto btn btn-sm btn-outline btn-secondary" disabled={!stripe || !clientSecret}>
+                <button type="submit" className="mt-5 mx-auto btn btn-sm btn-outline btn-secondary" >
                     Pay
                 </button>
             </form>
